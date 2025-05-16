@@ -1,0 +1,455 @@
+:root {
+    --body-background-color: rgb(181, 181, 181);
+    --nav-background-color: rgb(255, 152, 7);
+    --text-color: rgb(0, 0, 0);
+    --hover-border-color: rgb(65, 105, 225);
+}
+
+@font-face {
+    font-family: 'MADE Gentle';
+    src: local('MADE-Gentle') format('opentype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'MADE Gentle';
+
+    body {
+        background-color: var(--body-background-color);
+    }
+}
+
+/*code for binary animations*/
+canvas {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* grid home*/
+.profile {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+        "main main"
+        "nav nav"
+        "pic bio"
+        "skills skills"
+        "footer footer";
+}
+
+/*grid career*/
+.career {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+        "main2 main2"
+        "nav nav"
+        "pic2 pic2"
+        "cd cd"
+        "footer footer";
+}
+
+/*grid academics*/
+.academics {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+        "main3 main3"
+        "nav nav"
+        "pic3 pic3"
+        "edu edu "
+        "dipcer dipcer"
+        "footer footer";
+}
+
+/*grid other skills and hobbies*/
+.other-skills-and-hobbies {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+        "main4 main4"
+        "nav nav"
+        "pic4 hb"
+        "os os"
+        "footer footer";
+}
+
+/*grid contact*/
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+        "main5 main5"
+        "nav nav"
+        "pic5 pic5"
+        "conda conmess"
+        "footer footer";
+}
+
+/*grid wrapper merge code*/
+.profile,
+.career,
+.academics,
+.other-skills-and-hobbies,
+.contact,
+.projects {
+    gap: 10px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/*grid projects*/
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "main6 main6 main6"
+        "nav nav nav"
+        "proj1 proj2 proj3"
+        "footer footer footer";
+    gap: 20px;
+}
+
+/*disable purple link color*/
+a,
+a:hover,
+a:visited,
+a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+/*header home page grid position*/
+.header {
+    grid-area: main;
+}
+
+/*header career page grid position*/
+.header2 {
+    grid-area: main2;
+}
+
+/*header Academics page grid position*/
+.header3 {
+    grid-area: main3;
+}
+
+/*header other skills and hobbies page grid position */
+.header4 {
+    grid-area: main4;
+}
+
+/*header contact page grid position*/
+.header5 {
+    grid-area: main5;
+}
+
+/*header projects page grid position*/
+.header6 {
+    grid-area: main6;
+}
+
+/*merged headers code*/
+.header,
+.header2,
+.header3,
+.header4,
+.header5,
+.header6 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/*nav grid with flex*/
+.nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px;
+    background-color: var(--nav-background-color);
+    border: 4px solid var(--hover-border-color);
+    width: 100%;
+}
+
+/*nav button code*/
+.nav a button {
+    padding: 12px 18px;
+    border: 2px solid var(--hover-border-color);
+    background-color: var(--nav-background-color);
+    color: var(--text-color);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+/*nav hover code*/
+.nav a button:hover {
+    background-color: var(--hover-border-color);
+    color: white;
+}
+
+/*photo position code*/
+.photo {
+    grid-area: pic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/*img size*/
+.photo img {
+    width: 150px;
+}
+
+/*general photo code and home photo*/
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 4px solid var(--hover-border-color);
+    border-radius: 10px;
+}
+
+/*career photo*/
+.photo2 {
+    grid-area: pic2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/*academics photo */
+.photo3 {
+    grid-area: pic3;
+}
+
+/*other skills and hobbies photo*/
+.photo4 {
+    grid-area: pic4;
+}
+
+/*photo merge code*/
+.photo3,
+.photo4 {
+    width: fit-content;
+}
+
+/*contact photo*/
+.photo5 {
+    grid-area: pic5;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*merged border color for pictures*/
+.photo2 img,
+.photo3 img,
+.photo4 img,
+.photo5 img {
+    border: 4px solid var(--hover-border-color);
+}
+
+/*size enlarge contact photo*/
+.photo5 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/*classes for home page*/
+.bio {
+    grid-area: bio;
+}
+
+.skills {
+    grid-area: skills;
+}
+
+/*home page merge code*/
+.bio,
+.skills {
+    background-color: var(--nav-background-color);
+    border: 4px solid var(--hover-border-color);
+    padding: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+/*class for career page*/
+.career-data {
+    grid-area: cd;
+    background-color: var(--nav-background-color);
+    border: 4px solid var(--hover-border-color);
+    padding: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/*classes for Academics page*/
+.education {
+    grid-area: edu;
+}
+
+.Diplomas-and-certifications {
+    grid-area: dipcer;
+}
+
+/*merge code for academics page*/
+.education,
+.Diplomas-and-certifications {
+    padding: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/*classes for other skills and hobbies page*/
+.other-skills {
+    grid-area: os;
+}
+
+.hobbies {
+    grid-area: hb;
+    gap: 10px;
+}
+
+/*merge code for other skills and hobbies page*/
+.other-skills,
+.hobbies {
+    padding: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/*classes for contact page*/
+.contact-data {
+    grid-area: conda;
+    padding: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+    gap: 10px;
+    text-align: left;
+}
+
+.contact-message {
+    grid-area: conmess;
+    padding-left: 45%;
+    margin-top: 250px;
+}
+
+/*merge code for contact page*/
+.contact-data,
+.contact-message {
+    padding: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+    gap: 10px;
+}
+
+/*classes for projects page*/
+.project1 {
+    grid-area: proj1;
+}
+
+.project2 {
+    grid-area: proj2;
+}
+
+.project3 {
+    grid-area: proj3;
+}
+
+/*merge code for projects page*/
+.project1,
+.project2,
+.project3 {
+    background-color: var(--nav-background-color);
+    border: 4px solid var(--hover-border-color);
+    padding: 15px;
+    text-align: center;
+    min-height: 300px;
+}
+
+.project1 img,
+.project2 img,
+.project3 img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Media query for phone version */
+@media (max-width: 768px) {
+
+    .profile,
+    .career,
+    .academics,
+    .other-skills-and-hobbies,
+    .contact,
+    .projects,
+    .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .nav {
+        gap: 5px;
+        width: 90%;
+    }
+
+    /* Adjusted images for smaller screens */
+    .photo2 img,
+    .photo3 img,
+    .photo4 img,
+    .photo5 img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 4px solid var(--hover-border-color);
+    }
+}
+
+/*footer code*/
+.footer {
+    grid-area: footer;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+    background-color: var(--nav-background-color);
+    border: 4px solid var(--hover-border-color);
+    padding: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+}

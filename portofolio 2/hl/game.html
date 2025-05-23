@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Higher Lower Game</title>
+  <link rel="stylesheet" href="assets/global.css">
+  <link rel="stylesheet" href="assets/game.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1 class="center">Higher Lower</h1>
+    <div class="container bg-orange">
+      <section class="left-section center">
+        <h2 data-name="player">Player</h2>
+        <img src="assets/img/dice/1.jpg" data-dice="player" data-dice-index="0" />
+        <img src="assets/img/dice/2.jpg" data-dice="player" data-dice-index="1" />
+        <br><br>
+        <button class="bg-green" data-game="H" disabled>H</button>
+        <button class="bg-green" data-game="L" disabled>L</button>
+      </section>
+      <div class="vertical-line"></div>
+      <section class="right-section center">
+        <h2 data-name="computer">Computer</h2>
+        <img src="assets/img/dice/1.jpg" data-dice="computer" data-dice-index="0" />
+        <img src="assets/img/dice/2.jpg" data-dice="computer" data-dice-index="1" />
+        <br><br>
+        <button class="bg-green" data-computer-guess disabled>Waiting...</button>
+      </section>
+    </div>
+    <div class="message" data-message>Press START to begin the game.</div>
+    <div class="scoreboard" data-scoreboard></div>
+    <br>
+    <div class="button-container">
+      <button class="center" data-game="start">START</button>
+    </div>
+    <a href="index.html" class="return-to-start-page-button">Return</a>
+  </div>
+  <script src="assets/game.js"></script>
+</body>
+
+</html>

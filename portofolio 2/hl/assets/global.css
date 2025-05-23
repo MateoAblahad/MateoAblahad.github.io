@@ -1,0 +1,122 @@
+/* opmaak hele spel */
+
+body {
+    background: rgb(77, 77, 77)
+}
+
+h1 {
+    color: cyan;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+button {
+    color: orange;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.center {
+    text-align: center;
+}
+
+.bg-orange {
+    background: orange;
+}
+
+.bg-green {
+    background: green;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.start {
+    flex-direction: column;
+}
+
+.start>img {
+    border-radius: 25px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    width: 200px;
+    background-color: blue;
+    color: orange;
+    border: none;
+    border-radius: 25px;
+}
+
+
+.back-button,
+.return-to-start-page-button {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: rgb(0, 255, 251);
+    text-decoration: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 1350px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.end-message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em;
+    background-color: rgb(77, 77, 77);
+    padding: 25px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    input[type="text"] {
+        width: 80%;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .back-button,
+    .return-to-start-page-button {
+        font-size: 14px;
+        padding: 8px 15px;
+        left: 10px;
+        top: 10px;
+    }
+
+    .end-message {
+        font-size: 1.2em;
+        padding: 15px;
+    }
+}

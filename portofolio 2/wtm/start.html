@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/start.css">
+    <title>Start page Wack The Mole</title>
+</head>
+
+<body>
+    <h2 class="title">Wack The Mole</h2>
+
+    <div class="wrapper">
+        <div class="rs-side">
+            <button class="rules-button">?</button>
+            <div class="rules-panel">
+                <p>Welcome to Wack The Mole</p>
+                <p>Rules:</p>
+                <ul>
+                    <li>1. You have 5 lives and start with 0 points. If you miss a mole or fail to hit it in time, you
+                        lose a life.</li>
+                    <br>
+                    <li>2. Each mole you hit gives you 100 points, and golden moles give you 500 points.</li>
+                    <br>
+                    <li>3. At certain score thresholds, more holes open up, and the game speeds up. The changes are as
+                        follows:
+                        <ul>
+                            <li>From 0 to 2400 points: 4 holes.</li>
+                            <li>From 2500 to 4900 points: 9 holes.</li>
+                            <li>From 5000 to 7400 points: 12 holes.</li>
+                            <li>At 7500+ points: 16 holes.</li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li>4. You get to choose 3 different levels of the game: Baby-mode, normal-mode and pro-mode. Each
+                        mode has its own speed levels and end messages.</li>
+                    <br>
+                    <li>5. The game ends when you reach 10,000 points or lose all your lives. If you lose, you retain
+                        the points you earned before losing all your lives.</li>
+                    <br>
+                    <p>Have Fun!</p>
+                </ul>
+            </div>
+        </div>
+
+        <div class="gs-side">
+            <div class="container start">
+                <img src="img/example wtm.jpg" alt="Wack The Mole example" width="600">
+                <br>
+
+                <div class="button-container modes">
+                    <button type="button" class="mode-button baby" data-mode="all-mode.html?mode=baby">Baby</button>
+                    <button type="button" class="mode-button normal" data-mode="all-mode.html?mode=normal">Normal</button>
+                    <button type="button" class="mode-button pro" data-mode="all-mode.html?mode=pro">Pro</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="emptyside"></div>
+        <a href="../projects.html" class="back-button">Go Back</a>
+    </div>
+
+    <script src="js/start.js"></script>
+
+</body>
+
+</html>

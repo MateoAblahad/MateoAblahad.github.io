@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: Algerian;
+    background-color: rgb(58, 129, 0);
+    background-image: url('https://www.greenviewfertilizer.com/media/1405/kentucky-bluegrass.jpg');
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.score {
+    font-size: 4em;
+    margin-bottom: 0.5em;
+}
+
+
+
+.board {
+    height: 600px;
+    width: 600px;
+    border: 3px solid rgb(37, 13, 0);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 80px;
+    background-color: darkgreen;
+    cursor: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hole {
+    background: radial-gradient(circle at center, rgb(37, 13, 0), rgb(15, 5, 0));
+    background-color: rgb(37, 13, 0);
+    border-radius: 50%;
+    box-shadow: inset 0 10px 0 7px rgb(53, 21, 6),
+        inset 0 20px 20px 15px rgba(0, 0, 0, 0.3),
+        0 0 5px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.hole .mole {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    animation: rise 0.3s ease-out;
+}
+
+.mute-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(63, 36, 1);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.mute-button.muted {
+    background-color: rgb(143, 100, 43);
+    /* Change to red when sound is OFF */
+}
+
+.return-to-start-page-button {
+    background-color: rgb(63, 36, 1);
+    color: white;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@keyframes rise {
+    0% {
+        transform: translateX(-50%) translateY(-100%);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(0%);
+    }
+}
+
+.cursor {
+    height: 110px;
+    width: 100px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    background-image: url('../img/hammer.png');
+    background-size: 100% 100%;
+    transform: translate(-20%, -20%);
+    transition: transform 0.1s;
+    pointer-events: none;
+}
+
+.cursor.active {
+    transform: translate(-20%, -20%) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .score {
+        font-size: 2em;
+    }
+
+    .board {
+        height: 300px;
+        width: 300px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .hole {
+        box-shadow: inset 0 5px 0 4px rgb(53, 21, 6),
+            inset 0 10px 10px 8px rgba(0, 0, 0, 0.3),
+            0 0 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .cursor {
+        height: 60px;
+        width: 50px;
+    }
+
+    .mute-button,
+    .return-to-start-page-button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .mode-button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}

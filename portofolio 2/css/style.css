@@ -1,0 +1,374 @@
+/*root variables*/
+:root {
+    --body-background-color: rgb(181, 181, 181);
+    --nav-and-card-background-color: rgb(255, 152, 7);
+    --text-color: rgb(0, 0, 0);
+    --hover-border-color: rgb(65, 105, 225);
+    --hover-color:rgb(255, 255, 255);
+}
+
+/*font import code*/
+@font-face {
+    font-family: 'MADE Gentle';
+    src: url('../font/MADE-Gentle.otf') format('opentype');
+}
+
+/*font and background color */
+body {
+    background-color: var(--body-background-color);
+    font-family: 'MADE Gentle', sans-serif;
+}
+
+/*binary animation canvas*/
+canvas {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/*merged card code*/
+.navbar,
+.content-card,
+.project-card,
+footer {
+    background-color: var(--nav-and-card-background-color);
+    border: 4px solid var(--hover-border-color);
+    border-radius: 10px;
+}
+
+/*nav code*/
+.navbar {
+    padding: 15px !important;
+    margin-bottom: 1rem;
+}
+
+/*navbar container*/
+.navbar .container-fluid {
+    padding: 0 2rem !important;
+}
+
+/*navbar list*/
+.navbar .navbar-nav {
+    width: 100%;
+    justify-content: space-between !important;
+}
+
+/*nav buttons*/
+.nav-btn {
+    padding: 12px 18px !important;
+    border: 2px solid var(--hover-border-color) !important;
+    background-color:   var(--nav-and-card-background-color) !important;
+    color: var(--text-color) !important;
+    font-size: 16px !important;
+    border-radius: 8px !important;
+    transition: 0.3s ease !important;
+    min-width: 120px !important;
+    text-decoration: none;
+    text-align: center;
+}
+
+/*nav hover effect*/
+.nav-btn:hover {
+    background-color: var(--hover-border-color) !important;
+    color: var(--hover-color) !important;
+}
+
+/*content card code*/
+.content-card {
+    padding: 20px;
+    margin-bottom: 1rem;
+    height: 100%;
+    overflow: hidden;
+}
+
+/*merged image code*/
+.content-card>img,
+.project-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/*content card img fitting code*/
+.content-card>img {
+    width: calc(100% + 40px);
+    max-width: none;
+    margin: -20px -20px 20px -20px;
+}
+
+/*pfp container*/
+.profile-photo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -16px;
+}
+
+/*pfp img*/
+.profile-photo img {
+    max-width: 300px;
+    border-radius: 6px;
+}
+
+/*merged heading code*/
+.bio h1,
+.skills h1,
+.education h1,
+.diplomas-certifications h1,
+.other-skills h1,
+.hobbies h1,
+.contact-data h1 {
+    margin-bottom: 1.5rem;
+}
+
+/*merged text code*/
+.bio h3,
+.contact-message p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/*merged p code*/
+.skills p,
+.education p,
+.diplomas-certifications p,
+.other-skills p,
+.hobbies p,
+.contact-data p {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    padding: 8px;
+    transition: 0.3s ease;
+}
+
+/*skills hover effect*/
+.skills p:hover {
+    background-color: var(--hover-border-color);
+    color: var(--hover-color);
+    border-radius: 5px;
+    padding-left: 15px;
+}
+
+/*project card code*/
+.project-card {
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s ease;
+    height: 100%;
+    padding: 0;
+}
+
+/*project card text*/
+.project-card p {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+}
+
+/*project card link*/
+.project-card a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    height: 100%;
+}
+
+/*project overlay*/
+.overlay-text {
+    position: absolute;
+    inset: 0;
+    background-color: var(--nav-and-card-background-color);
+    padding: 20px;
+    opacity: 0;
+    transition: 0.3s ease;
+    color: var(--text-color);
+}
+
+/*project overlay hover*/
+.project-card:hover .overlay-text {
+    opacity: 1;
+}
+
+/*header code*/
+.header {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+/*footer code*/
+footer {
+    padding: 15px;
+    margin-top: 1rem !important;
+}
+
+/*media query for tablet*/
+@media (max-width: 991.98px) {
+    .navbar {
+        padding: 15px !important;
+    }
+
+    .navbar .container-fluid {
+        padding: 0 1rem !important;
+    }
+
+    .navbar .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 0.5rem !important;
+    }
+
+    .navbar .nav-btn {
+        width: 200px;
+        margin: 0;
+        text-align: center;
+        font-size: 16px !important;
+    }
+
+    /*special tablet sizing code*/
+    .row>[class*='col-'] {
+        width: 100%; /*col width always 100%*/
+        max-width: 100%; /*makes sure the width is never smaller than 100%*/
+        flex: 0 0 100%; /*make sure the content never shinks or grows*/
+        margin-bottom: 1rem; /*adds 1rem spacing for everything*/
+    }
+
+    .project-card {
+        overflow: hidden;
+        position: relative;
+        transition: 0.3s ease;
+        height: 100%;
+        padding: 0;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .project-card img {
+        width: 100%;
+        height: 250px;
+        object-fit: contain;
+    }
+
+    .project-card p {
+        padding: 0.5rem;
+        font-size: 1.5rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .overlay-text {
+        padding: 0.75rem;
+    }
+
+    .overlay-text h1 {
+        font-size: 1.2rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .overlay-text p {
+        font-size: 0.75rem;
+        line-height: 1.2;
+        margin-bottom: 0.25rem;
+    }
+
+    .content-card {
+        padding: 15px;
+    }
+
+    .profile-photo img {
+        max-width: 250px;
+    }
+
+    .bio h3,
+    .contact-message p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .skills p,
+    .education p,
+    .diplomas-certifications p,
+    .other-skills p,
+    .hobbies p,
+    .contact-data p {
+        font-size: 1rem;
+        padding: 6px;
+        margin-bottom: 0.6rem;
+    }
+}
+
+/*media query for mobile*/
+@media (max-width: 575.98px) {
+    .navbar .nav-btn {
+        width: 100%;
+    }
+
+    .project-card {
+        margin-bottom: 1 rem;
+    }
+
+    .project-card img {
+        height: 250px;
+        object-fit: contain;
+    }
+
+    .project-card p {
+        padding: 0.5rem;
+        font-size: 1.5rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .overlay-text {
+        padding: 0.75rem;
+    }
+
+    .overlay-text h1 {
+        font-size: 1.2rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .overlay-text p {
+        font-size: 0.75rem;
+        line-height: 1.2;
+        margin-bottom: 0.25rem;
+    }
+
+    .content-card {
+        padding: 12px;
+    }
+
+    .profile-photo img {
+        max-width: 200px;
+    }
+
+    .bio h3,
+    .contact-message p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .skills p,
+    .education p,
+    .diplomas-certifications p,
+    .other-skills p,
+    .hobbies p,
+    .contact-data p {
+        font-size: 0.9rem;
+        padding: 5px;
+        margin-bottom: 0.5rem;
+    }
+
+    .header {
+        font-size: 24px;
+        padding: 8px;
+        margin-bottom: 0.75rem;
+    }
+}

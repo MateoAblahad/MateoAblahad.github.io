@@ -10,7 +10,7 @@
 /*font import code*/
 @font-face {
     font-family: 'MADE Gentle';
-src: url('/font/MADE-Gentle.otf') format('opentype');
+src: url('../font/MADE-Gentle.otf') format('opentype');
 }
 
 /*font and background color */

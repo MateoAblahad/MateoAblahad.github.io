@@ -10,7 +10,7 @@
 /*font import code*/
 @font-face {
     font-family: 'MADE Gentle';
-    src: url("https://www.dafont.com/made-gentle.font");
+  src: url('MADE-Gentle.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }

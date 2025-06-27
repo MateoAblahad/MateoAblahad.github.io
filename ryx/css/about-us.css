@@ -1,0 +1,119 @@
+body {
+    color: rgb(38, 176, 0);
+    background: url(../img/about-us-page.png) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.wrapper-about-us {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.about-us {
+    text-align: center;
+    margin: 15px auto;
+    margin-top: 80px;
+    max-width: 800px;
+    width: 90%;
+}
+
+.main {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: solid 2px rgb(38, 176, 0);
+    border-radius: 10px;
+    color: rgb(38, 176, 0);
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 800px;
+    width: 90%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: 'Unbounded', cursive;
+    text-align: center;
+    text-shadow: 0 0 5px rgb(38, 176, 0),
+                 0 0 10px rgb(38, 176, 0),
+                 0 0 20px rgb(38, 176, 0);
+    margin: 10px 0;
+    word-wrap: break-word;
+}
+
+h2 {
+    font-size: 1.8em;
+    border-bottom: 2px solid rgb(38, 176, 0);
+    padding-bottom: 5px;
+    font-family: 'Unbounded', cursive;
+    color: rgb(38, 176, 0);
+    margin: 20px 0;
+    word-wrap: break-word;
+}
+
+h3 {
+    font-size: 1.2em;
+    font-weight: normal;
+    font-family: 'Audiowide', cursive;
+    color: rgb(38, 176, 0);
+    line-height: 1.5;
+    margin: 15px 0;
+    word-wrap: break-word;
+}
+
+p {
+    font-size: 1.1em;
+    color: rgb(38, 176, 0);
+    line-height: 1.5;
+    margin: 15px 0;
+    word-wrap: break-word;
+}
+
+footer {
+    margin-top: auto;
+    padding: 20px 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .wrapper-about-us {
+        padding: 10px;
+    }
+    
+    .about-us, .main {
+        width: 95%;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    h3 {
+        font-size: 1.1em;
+    }
+    
+    p {
+        font-size: 1em;
+    }
+    
+    .main {
+        padding: 15px;
+    }
+}

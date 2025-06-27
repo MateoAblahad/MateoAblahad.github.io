@@ -1,0 +1,22 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.body-category {
+    background: url('../img/cat-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.body-coins {
+    background: url('../img/coin-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+h4 {
+    font-family: 'Unbounded', cursive;
+}
+
+p {
+    font-family: 'Audiowide', cursive;
+}
